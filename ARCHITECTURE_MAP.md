@@ -16,9 +16,7 @@ repository: bhg-knowledge
 
 governed_by:
   - BHG_REPOSITORY_AUTHORITY_SEQUENCE
-depends_on:
-  - REPOSITORY_STANDARD
-  - REPOSITORY_STRUCTURE
+depends_on: []
 related_to:
   - BHG-GOV-CAM-001
   - BHG-Ecosystem-Foundation
