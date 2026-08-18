@@ -20,7 +20,7 @@ Defines the minimum identity and metadata model for an institutional idea record
 
 ```yaml
 idea_id: IDEA-YYYY-NNNN
- title: <human-readable title>
+title: <human-readable title>
 version: 0.1.0
 status: captured
 type: business|product|technology|governance|architecture|finance|legal|operations|research|other
