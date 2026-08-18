@@ -1,0 +1,99 @@
+name: BHG Idea Registry Validation
+
+on:
+  pull_request:
+    paths:
+      - '02-IDEAS/**'
+      - '00-GOBERNANZA/IDEA_SYSTEM/**'
+      - '.github/workflows/idea-registry-validation.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - '02-IDEAS/**'
+      - '00-GOBERNANZA/IDEA_SYSTEM/**'
+  schedule:
+    - cron: '17 4 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate idea records
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate registry records
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+          import sys
+
+          required = {
+              'idea_id', 'title', 'version', 'status', 'type',
+              'maturity', 'owner', 'created', 'last_updated'
+          }
+          statuses = {
+              'captured', 'classified', 'draft', 'proposed', 'under_review',
+              'experimental', 'validated', 'in_development', 'implemented',
+              'monitored', 'promoted', 'rejected', 'deferred', 'archived',
+              'superseded', 'abandoned'
+          }
+          types = {
+              'business', 'product', 'technology', 'governance',
+              'architecture', 'finance', 'legal', 'operations', 'research',
+              'other'
+          }
+          maturities = {'L1', 'L2', 'L3', 'L4'}
+          failures = []
+
+          records = sorted(Path('02-IDEAS').glob('IDEA-*.md'))
+          if not records:
+              failures.append('No IDEA-*.md records found.')
+
+          seen = set()
+          for path in records:
+              text = path.read_text(encoding='utf-8')
+              if not text.startswith('---\n'):
+                  failures.append(f'{path}: missing YAML frontmatter.')
+                  continue
+              parts = text.split('---\n', 2)
+              if len(parts) < 3:
+                  failures.append(f'{path}: malformed frontmatter boundary.')
+                  continue
+              front = parts[1]
+              values = {}
+              for line in front.splitlines():
+                  match = re.match(r'^([A-Za-z0-9_]+):\s*(.*)$', line)
+                  if match:
+                      values[match.group(1)] = match.group(2).strip().strip("'").strip('"')
+
+              missing = required - values.keys()
+              if missing:
+                  failures.append(f'{path}: missing required fields: {sorted(missing)}')
+                  continue
+
+              idea_id = values['idea_id']
+              if not re.fullmatch(r'IDEA-\d{4}-\d{4}', idea_id):
+                  failures.append(f'{path}: invalid idea_id {idea_id!r}.')
+              if idea_id in seen:
+                  failures.append(f'{path}: duplicate idea_id {idea_id}.')
+              seen.add(idea_id)
+
+              if values['status'] not in statuses:
+                  failures.append(f'{path}: invalid status {values["status"]!r}.')
+              if values['type'] not in types:
+                  failures.append(f'{path}: invalid type {values["type"]!r}.')
+              if values['maturity'] not in maturities:
+                  failures.append(f'{path}: invalid maturity {values["maturity"]!r}.')
+
+          if failures:
+              print('\n'.join(failures))
+              sys.exit(1)
+
+          print(f'Validated {len(records)} idea record(s) successfully.')
