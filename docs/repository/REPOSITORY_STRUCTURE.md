@@ -6,11 +6,11 @@
 
 # Purpose
 
-This document defines the official directory structure of the BHG-Knowledge repository.
+This document defines the intended directory structure of the BHG-Knowledge repository.
 
 Every document must belong to a well-defined location with a clearly defined responsibility.
 
-The repository structure is part of the governance of the ecosystem.
+The repository structure is a local architecture concern operating under the BHG cross-repository authority sequence. It does not create enterprise governance authority.
 
 ---
 
@@ -26,23 +26,21 @@ The repository shall be:
 - AI-friendly;
 - traceable.
 
-Every directory has exactly one primary responsibility.
+Every materialized directory has exactly one primary responsibility.
+
+A planned directory is not considered present until it is physically materialized and registered through a controlled architecture change.
 
 ---
 
-# Top-Level Structure
+# Materialized Top-Level Structure
 
-```
+The current materialized structure is:
+
+```text
 /
 ├── .github/
 ├── docs/
-├── 00-GOBERNANZA/
-├── 01-ESTRATEGIA/
-├── 02-IDEAS/
-├── 03-INVESTIGACION/
-├── 04-LECCIONES/
-├── 05-PROYECTOS/
-├── 99-HISTORIAL/
+│   └── repository/
 ├── README.md
 ├── LICENSE
 ├── CONTRIBUTING.md
@@ -50,6 +48,24 @@ Every directory has exactly one primary responsibility.
 ├── SECURITY.md
 └── CHANGELOG.md
 ```
+
+The knowledge-domain directories below are architectural targets, not current filesystem facts.
+
+---
+
+# Planned Knowledge Structure
+
+```text
+00-GOBERNANZA/
+01-ESTRATEGIA/
+02-IDEAS/
+03-INVESTIGACION/
+04-LECCIONES/
+05-PROYECTOS/
+99-HISTORIAL/
+```
+
+These directories shall be materialized only through a controlled architecture change that verifies authority, responsibility, metadata and references.
 
 ---
 
@@ -70,7 +86,7 @@ Examples:
 
 ## docs/
 
-Technical documentation governing repository engineering.
+Technical documentation governing repository engineering and local architecture.
 
 Examples:
 
@@ -80,31 +96,23 @@ Examples:
 - Metadata Standards
 - AI Standards
 
+These documents must remain compatible with superior BHG governance and must not redefine it.
+
 ---
 
 ## 00-GOBERNANZA/
 
-Repository governance.
+Planned local governance-interface area.
 
-Defines:
+If materialized, it may contain local knowledge-system rules, lifecycle definitions, taxonomies and operating contracts that are subordinate to superior BHG authority.
 
-- purpose;
-- principles;
-- lifecycle;
-- taxonomy;
-- governance rules.
+It must not be treated as a substitute for BHG constitutional or enterprise governance repositories.
 
 ---
 
 ## 01-ESTRATEGIA/
 
-Long-term strategic knowledge.
-
-Contains:
-
-- strategic decisions;
-- corporate vision;
-- permanent policies.
+Long-term strategic knowledge within the scope assigned to BHG-Knowledge.
 
 ---
 
@@ -112,13 +120,13 @@ Contains:
 
 Knowledge capture.
 
-Contains:
+Contains, when materialized:
 
 - incoming ideas;
 - brainstorming;
 - concept registration.
 
-Ideas are never discarded.
+Ideas are preserved according to the applicable lifecycle rules.
 
 ---
 
@@ -126,7 +134,7 @@ Ideas are never discarded.
 
 Research activities.
 
-Contains:
+Contains, when materialized:
 
 - studies;
 - evaluations;
@@ -153,9 +161,9 @@ Documents:
 
 Knowledge transition.
 
-An idea reaches this directory only after becoming an approved project.
+An idea reaches this directory only after satisfying the applicable project-entry criteria.
 
-The implementation itself belongs in a dedicated project repository.
+The implementation itself belongs in the dedicated project repository when such a repository exists.
 
 ---
 
@@ -163,13 +171,13 @@ The implementation itself belongs in a dedicated project repository.
 
 Historical preservation.
 
-Contains:
+Contains, when materialized:
 
 - archived material;
 - superseded documents;
 - historical references.
 
-Knowledge should remain discoverable.
+Knowledge should remain discoverable and traceable.
 
 ---
 
@@ -179,7 +187,9 @@ Future directories may be added only when:
 
 - they solve a distinct responsibility;
 - existing directories cannot reasonably contain the new content;
-- governance documentation is updated.
+- the proposed owner and authority are identifiable;
+- the change passes the repository creation gate;
+- architecture documentation is updated consistently.
 
 ---
 
@@ -198,21 +208,25 @@ Directories should:
 
 Every document shall have exactly one canonical location.
 
-Documents should never exist in multiple directories.
+Documents should never exist in multiple directories unless an explicit archival or reference mechanism requires it.
 
 Cross-references should be used instead of duplication.
+
+Before creating a document, determine whether another repository or directory is already the canonical owner.
 
 ---
 
 # AI Navigation
 
-AI systems should determine document locations using repository governance rather than heuristics.
+AI systems should determine document locations using repository architecture and applicable governance rather than heuristics.
 
 When uncertainty exists:
 
-1. consult governance;
-2. consult repository standards;
-3. preserve consistency.
+1. consult superior authority;
+2. consult the repository architecture contract;
+3. identify the canonical owner;
+4. preserve consistency;
+5. stop rather than invent authority when the conflict cannot be resolved.
 
 ---
 
@@ -220,4 +234,4 @@ When uncertainty exists:
 
 Repository structure is not about folders.
 
-It is the architecture that allows knowledge to remain understandable decades into the future.
+It is the architecture that allows knowledge to remain understandable decades into the future, while preserving clear boundaries of authority and responsibility.
