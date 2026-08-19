@@ -6,11 +6,11 @@
 
 # Purpose
 
-This document defines the mandatory repository engineering standards for BHG-Knowledge.
+This document defines the repository engineering standards for BHG-Knowledge.
 
-Every file, directory and future expansion of the repository shall comply with these standards.
+Every file, directory and future expansion of the repository shall comply with these standards and with the superior BHG authorities that govern the repository.
 
-Repository organization is considered part of the architecture of BKOs.
+Repository organization is part of the local architecture of BHG-Knowledge. It does not create enterprise governance authority.
 
 ---
 
@@ -29,9 +29,9 @@ The repository shall be:
 
 ---
 
-# Repository Layers
+# Local Repository Layers
 
-The repository is divided into four permanent layers.
+The repository is divided into five local layers within the superior BHG architecture.
 
 ## Layer 0 — Repository Foundation
 
@@ -47,22 +47,17 @@ Examples:
 
 ---
 
-## Layer 1 — Governance
+## Layer 1 — Governance Interface & Compliance
 
-Defines how the knowledge system works.
+Provides the repository's interface to superior governance and records applicable local compliance rules.
 
-Examples:
-
-- Constitution
-- Policies
-- Standards
-- Governance
+This layer may reference, operationalize or specialize superior governance, but it must not redefine constitutional or enterprise authority.
 
 ---
 
 ## Layer 2 — Knowledge
 
-Stores organizational knowledge.
+Stores organizational knowledge within the responsibility assigned to BHG-Knowledge.
 
 Examples:
 
@@ -76,7 +71,7 @@ Examples:
 
 ## Layer 3 — Automation
 
-Supports future automation.
+Supports future automation subject to applicable governance, security and approval controls.
 
 Examples:
 
@@ -88,14 +83,28 @@ Examples:
 
 ---
 
+## Layer 4 — Knowledge Services
+
+Supports capture, retrieval, evolution, traceability and research services.
+
+---
+
+## Layer 5 — BKOs
+
+Future implementation of the BHG Knowledge Operating System.
+
+---
+
 # Repository Rules
 
 Every document shall have:
 
 - one canonical location;
 - one clear responsibility;
-- one governing authority;
+- one identifiable governing authority or inherited authority;
 - one version history.
+
+No local document may silently claim a responsibility already canonically owned elsewhere.
 
 ---
 
@@ -120,7 +129,7 @@ AI_COLLABORATION_STANDARD.md
 
 # Versioning
 
-Repository evolution follows Semantic Versioning.
+Repository evolution follows Semantic Versioning where versioning is applicable.
 
 Major versions represent architectural changes.
 
@@ -132,14 +141,14 @@ Patch versions correct existing content.
 
 # Traceability
 
-Every important document should define:
+Every important document should define, directly or through inherited metadata:
 
 - purpose;
 - governing authority;
-- governed documents;
+- governed documents where applicable;
 - repository path;
 - version;
-- future dependencies.
+- dependencies and relationships where applicable.
 
 ---
 
@@ -149,7 +158,8 @@ New directories shall be created only when:
 
 - a unique responsibility exists;
 - existing directories cannot reasonably contain the content;
-- repository governance is updated.
+- the proposed structure has been validated against the repository authority sequence;
+- the architecture documentation is updated as part of the same controlled change.
 
 Repository growth should remain intentional.
 
@@ -157,11 +167,11 @@ Repository growth should remain intentional.
 
 # Artificial Intelligence Compatibility
 
-Repository organization should always facilitate deterministic navigation by AI systems.
+Repository organization should facilitate deterministic navigation by AI systems.
 
 Knowledge should never depend on implicit assumptions.
 
-Documents should expose enough metadata to allow automated reasoning.
+Documents should expose enough context and metadata to allow automated reasoning without granting automated systems authority they do not possess.
 
 ---
 
@@ -176,13 +186,15 @@ Every structural modification should improve at least one of:
 - consistency;
 - automation readiness.
 
+Structural changes must also preserve the repository's authority boundary.
+
 ---
 
 # Future Compatibility
 
-This standard is intentionally designed to support the future BHG Knowledge Operating System (BKOs).
+This standard is designed to support the future BHG Knowledge Operating System (BKOs).
 
-All future automation should build upon these repository standards rather than replacing them.
+All future automation should build upon these repository standards and superior governance rather than replacing them.
 
 ---
 
@@ -190,4 +202,4 @@ All future automation should build upon these repository standards rather than r
 
 A repository is not merely a collection of files.
 
-It is the operational architecture through which organizational knowledge is preserved, understood and continuously improved.
+It is the operational architecture through which organizational knowledge is preserved, understood and continuously improved, within the authority structure of the ecosystem.

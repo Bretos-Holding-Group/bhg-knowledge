@@ -6,13 +6,15 @@
 
 ## ¿Qué es BHG-Knowledge?
 
-BHG-Knowledge es el sistema de gestión del conocimiento de Breto's Holding Group (BHG).
+BHG-Knowledge es el sistema especializado de gestión del conocimiento de Breto's Holding Group (BHG).
 
-Su propósito es preservar, organizar, relacionar y hacer evolucionar el conocimiento estratégico del Holding desde el nacimiento de una idea hasta su implementación como producto, servicio, empresa, estándar o proceso corporativo.
+Su propósito es preservar, organizar, relacionar y hacer evolucionar el conocimiento estratégico del Holding desde el nacimiento de una idea hasta su transición hacia un producto, servicio, empresa, estándar o proceso corporativo.
 
 No es un repositorio de notas.
 
-Es la memoria institucional permanente del ecosistema BHG.
+Es la memoria institucional especializada del ecosistema BHG para conocimiento, contexto y trazabilidad.
+
+BHG-Knowledge no constituye por sí mismo la autoridad constitucional o de gobierno del Holding. Consume y aplica las reglas de las autoridades superiores que le sean aplicables.
 
 ---
 
@@ -26,19 +28,19 @@ Los sistemas las hacen realidad.
 
 Las empresas las llevan al mundo.
 
-Creemos que el conocimiento correctamente estructurado constituye el activo más importante de cualquier organización.
+Creemos que el conocimiento correctamente estructurado constituye un activo estratégico de cualquier organización.
 
 ---
 
 # Misión
 
-Construir una memoria organizacional capaz de preservar el conocimiento, facilitar la toma de decisiones y acelerar la creación de sistemas de alto impacto para Breto's Holding Group.
+Construir una memoria organizacional especializada capaz de preservar el conocimiento, facilitar la toma de decisiones y acelerar la creación de sistemas de alto impacto para Breto's Holding Group.
 
 ---
 
 # Visión
 
-Convertirse en el núcleo de conocimiento del ecosistema BHG y evolucionar hacia el futuro **BHG Knowledge Operating System (BKOs)**, una plataforma capaz de asistir en la gestión, evolución y trazabilidad del conocimiento corporativo.
+Convertirse en el núcleo especializado de conocimiento del ecosistema BHG y evolucionar hacia el futuro **BHG Knowledge Operating System (BKOs)**, una plataforma capaz de asistir en la gestión, evolución y trazabilidad del conocimiento corporativo.
 
 ---
 
@@ -63,20 +65,24 @@ Convertirse en el núcleo de conocimiento del ecosistema BHG y evolucionar hacia
 - El conocimiento evoluciona continuamente.
 - La calidad documental es obligatoria.
 - La IA complementa el conocimiento humano; no lo sustituye.
+- La especialización local no puede sobrepasar la autoridad superior aplicable.
+- Todo documento debe tener un propietario y una ubicación canónica claramente determinables.
 
 ---
 
 # Arquitectura General
 
-El repositorio se construye por capas.
+El repositorio se construye por capas locales que operan dentro de la arquitectura superior de BHG.
 
 ## Layer 0 — Repository Infrastructure
 
 Infraestructura base del repositorio.
 
-## Layer 1 — Governance
+## Layer 1 — Governance Interface & Compliance
 
-Gobernanza, constitución, estándares y políticas.
+Referencia, integración y cumplimiento de la gobernanza superior aplicable al repositorio.
+
+Esta capa no crea ni sustituye autoridad constitucional o empresarial.
 
 ## Layer 2 — Knowledge
 
@@ -84,7 +90,7 @@ Modelos de conocimiento, taxonomías y estados.
 
 ## Layer 3 — Artificial Intelligence
 
-Reglas, plantillas e integración con asistentes de IA.
+Reglas, plantillas e integración con asistentes de IA, siempre sujetas a la autoridad y políticas superiores aplicables.
 
 ## Layer 4 — Knowledge Services
 
@@ -92,13 +98,13 @@ Servicios de captura, evolución, trazabilidad e investigación.
 
 ## Layer 5 — BKOs
 
-Implementación del futuro BHG Knowledge Operating System.
+Implementación futura del BHG Knowledge Operating System.
 
 ---
 
 # Relación con el Ecosistema
 
-BHG-Knowledge alimenta el desarrollo de todos los proyectos del Holding.
+BHG-Knowledge proporciona conocimiento especializado y contexto trazable para apoyar los proyectos y sistemas del Holding.
 
 Ejemplos:
 
@@ -110,7 +116,7 @@ Ejemplos:
 - investigaciones
 - nuevos negocios
 
-Todo comienza aquí.
+BHG-Knowledge no es automáticamente el propietario canónico de todos los conocimientos relacionados con esos proyectos. La propiedad documental debe resolverse mediante la autoridad y el propietario canónico correspondiente.
 
 ---
 
@@ -120,23 +126,23 @@ Todo comienza aquí.
 |--------|-------|
 | Estado | En desarrollo |
 | Versión | 1.0.0 |
-| Tipo | Repositorio Fundacional |
+| Tipo | Sistema especializado de gestión del conocimiento |
 | Propietario | Luis F. Breto R. |
 | Organización | Breto's Holding Group |
+| Autoridad local | Derivada, no superior |
 
 ---
 
 # Roadmap
 
-Actualmente el proyecto se encuentra construyendo su infraestructura documental.
+Actualmente el proyecto se encuentra construyendo su infraestructura documental y su contrato arquitectónico.
 
 Las siguientes fases incorporarán:
 
-- Gobernanza.
-- Frameworks.
-- Estándares.
-- Motor de conocimiento.
-- Automatización.
+- modelos de conocimiento;
+- estándares especializados;
+- motor de conocimiento;
+- automatización;
 - BKOs.
 
 ---
